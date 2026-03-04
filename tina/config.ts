@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
+    basePath: "PWEB-4.1",
   },
 
   media: {

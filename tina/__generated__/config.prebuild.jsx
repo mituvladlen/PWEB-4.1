@@ -6,7 +6,8 @@ var config_default = defineConfig({
   token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
-    publicFolder: "public"
+    publicFolder: "public",
+    basePath: "PWEB-4.1"
   },
   media: {
     tina: {

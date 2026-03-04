@@ -42,6 +42,7 @@ export default defineConfig({
           // Mobile Banner
           { type: "string", name: "mobileBannerTitle", label: "Mobile Banner Title" },
           { type: "string", name: "mobileBannerText", label: "Mobile Banner Text" },
+          { type: "string", name: "mobileBannerCtaText", label: "Mobile Banner Button Text" },
 
           // How It Works
           { type: "string", name: "howItWorksTitle", label: "How It Works Section Title" },

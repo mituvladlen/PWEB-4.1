@@ -9,6 +9,7 @@ heroCtaText: "Start Your Campaign"
 
 mobileBannerTitle: "Manage Your Campaigns On the Go"
 mobileBannerText: "Track views, clippers, and earnings — right from your phone."
+mobileBannerCtaText: "Start Now"
 
 howItWorksTitle: "How It Works"
 steps:

@@ -104,7 +104,7 @@ export default function Home(props: HomeProps) {
               <h3>{String(p.mobileBannerTitle || "")}</h3>
               <p>{String(p.mobileBannerText || "")}</p>
             </div>
-            <a href="#contact" className="cta-button">Start Now</a>
+            <a href="#contact" className="cta-button">{String(p.mobileBannerCtaText || "Start Now")}</a>
           </div>
         </div>
       </section>

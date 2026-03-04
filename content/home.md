@@ -9,7 +9,6 @@ heroCtaText: "Start Your Campaign"
 
 mobileBannerTitle: "Manage Your Campaigns On the Go"
 mobileBannerText: "Track views, clippers, and earnings — right from your phone."
-mobileBannerCtaText: "Start Now"
 
 howItWorksTitle: "How It Works"
 steps:
@@ -49,7 +48,6 @@ benefits:
 
 statsTitle: "Join the Creator Movement"
 statsSubtitle: "Thousands of creators are already scaling with MediaGrowth"
-testimonialsTitle: "Real Results from Real Creators"
 stats:
   - number: "500+"
     label: "Active Creators"

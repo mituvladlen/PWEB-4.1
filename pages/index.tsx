@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import { useTina } from "tinacms/dist/react";
-import { client } from "../tina/__generated__/client";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 type HomeProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -106,7 +108,7 @@ export default function Home(props: HomeProps) {
               <h3>{String(p.mobileBannerTitle || "")}</h3>
               <p>{String(p.mobileBannerText || "")}</p>
             </div>
-            <a href="#contact" className="cta-button">{String(p.mobileBannerCtaText || "Start Now")}</a>
+            <a href="#contact" className="cta-button">Start Now</a>
           </div>
         </div>
       </section>
@@ -146,7 +148,7 @@ export default function Home(props: HomeProps) {
       {/* Testimonials */}
       <section id="testimonials" className="testimonials">
         <div className="container">
-          <h2 className="section-title">{String(p.testimonialsTitle || "Real Results from Real Creators")}</h2>
+          <h2 className="section-title">Real Results from Real Creators</h2>
           <div className="testimonials-grid">
             {[1, 2, 3, 4, 5].map((n) => (
               <div className="testimonial-card" key={n}>
@@ -216,6 +218,8 @@ export default function Home(props: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const { data, query, variables } = await client.queries.home({ relativePath: "home.md" });
-  return { props: { data, query, variables } };
+  const filePath = path.join(process.cwd(), "content", "home.md");
+  const fileContents = fs.readFileSync(filePath, "utf8");
+  const { data } = matter(fileContents);
+  return { props: { data: { home: data }, query: "", variables: {} } };
 }

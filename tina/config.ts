@@ -76,6 +76,9 @@ export default defineConfig({
           // Stats
           { type: "string", name: "statsTitle", label: "Stats Section Title" },
           { type: "string", name: "statsSubtitle", label: "Stats Subtitle" },
+
+          // Testimonials
+          { type: "string", name: "testimonialsTitle", label: "Testimonials Section Title" },
           {
             type: "object",
             name: "stats",

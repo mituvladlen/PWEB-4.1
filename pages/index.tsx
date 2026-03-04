@@ -144,7 +144,7 @@ export default function Home(props: HomeProps) {
       {/* Testimonials */}
       <section id="testimonials" className="testimonials">
         <div className="container">
-          <h2 className="section-title">Real Results from Real Creators</h2>
+          <h2 className="section-title">{String(p.testimonialsTitle || "Real Results from Real Creators")}</h2>
           <div className="testimonials-grid">
             {[1, 2, 3, 4, 5].map((n) => (
               <div className="testimonial-card" key={n}>

@@ -48,6 +48,7 @@ benefits:
 
 statsTitle: "Join the Creator Movement"
 statsSubtitle: "Thousands of creators are already scaling with MediaGrowth"
+testimonialsTitle: "Real Results from Real Creators"
 stats:
   - number: "500+"
     label: "Active Creators"

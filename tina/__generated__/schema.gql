@@ -113,14 +113,12 @@ type Home implements Node & Document {
   heroCtaText: String
   mobileBannerTitle: String
   mobileBannerText: String
-  mobileBannerCtaText: String
   howItWorksTitle: String
   steps: [HomeSteps]
   benefitsTitle: String
   benefits: [HomeBenefits]
   statsTitle: String
   statsSubtitle: String
-  testimonialsTitle: String
   stats: [HomeStats]
   contactTitle: String
   contactText: String
@@ -170,14 +168,12 @@ input HomeFilter {
   heroCtaText: StringFilter
   mobileBannerTitle: StringFilter
   mobileBannerText: StringFilter
-  mobileBannerCtaText: StringFilter
   howItWorksTitle: StringFilter
   steps: HomeStepsFilter
   benefitsTitle: StringFilter
   benefits: HomeBenefitsFilter
   statsTitle: StringFilter
   statsSubtitle: StringFilter
-  testimonialsTitle: StringFilter
   stats: HomeStatsFilter
   contactTitle: StringFilter
   contactText: StringFilter
@@ -247,14 +243,12 @@ input HomeMutation {
   heroCtaText: String
   mobileBannerTitle: String
   mobileBannerText: String
-  mobileBannerCtaText: String
   howItWorksTitle: String
   steps: [HomeStepsMutation]
   benefitsTitle: String
   benefits: [HomeBenefitsMutation]
   statsTitle: String
   statsSubtitle: String
-  testimonialsTitle: String
   stats: [HomeStatsMutation]
   contactTitle: String
   contactText: String

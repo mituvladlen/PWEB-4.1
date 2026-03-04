@@ -1,9 +1,7 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import { useTina } from "tinacms/dist/react";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { client } from "../tina/__generated__/client";
 
 type HomeProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -218,8 +216,6 @@ export default function Home(props: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "content", "home.md");
-  const fileContents = fs.readFileSync(filePath, "utf8");
-  const { data } = matter(fileContents);
-  return { props: { data: { home: data }, query: "", variables: {} } };
+  const { data, query, variables } = await client.queries.home({ relativePath: "home.md" });
+  return { props: { data, query, variables } };
 }

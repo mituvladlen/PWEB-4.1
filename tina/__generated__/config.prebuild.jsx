@@ -37,7 +37,6 @@ var config_default = defineConfig({
           // Mobile Banner
           { type: "string", name: "mobileBannerTitle", label: "Mobile Banner Title" },
           { type: "string", name: "mobileBannerText", label: "Mobile Banner Text" },
-          { type: "string", name: "mobileBannerCtaText", label: "Mobile Banner Button Text" },
           // How It Works
           { type: "string", name: "howItWorksTitle", label: "How It Works Section Title" },
           {
@@ -69,8 +68,6 @@ var config_default = defineConfig({
           // Stats
           { type: "string", name: "statsTitle", label: "Stats Section Title" },
           { type: "string", name: "statsSubtitle", label: "Stats Subtitle" },
-          // Testimonials
-          { type: "string", name: "testimonialsTitle", label: "Testimonials Section Title" },
           {
             type: "object",
             name: "stats",

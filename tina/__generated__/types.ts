@@ -195,14 +195,12 @@ export type Home = Node & Document & {
   heroCtaText?: Maybe<Scalars['String']['output']>;
   mobileBannerTitle?: Maybe<Scalars['String']['output']>;
   mobileBannerText?: Maybe<Scalars['String']['output']>;
-  mobileBannerCtaText?: Maybe<Scalars['String']['output']>;
   howItWorksTitle?: Maybe<Scalars['String']['output']>;
   steps?: Maybe<Array<Maybe<HomeSteps>>>;
   benefitsTitle?: Maybe<Scalars['String']['output']>;
   benefits?: Maybe<Array<Maybe<HomeBenefits>>>;
   statsTitle?: Maybe<Scalars['String']['output']>;
   statsSubtitle?: Maybe<Scalars['String']['output']>;
-  testimonialsTitle?: Maybe<Scalars['String']['output']>;
   stats?: Maybe<Array<Maybe<HomeStats>>>;
   contactTitle?: Maybe<Scalars['String']['output']>;
   contactText?: Maybe<Scalars['String']['output']>;
@@ -252,14 +250,12 @@ export type HomeFilter = {
   heroCtaText?: InputMaybe<StringFilter>;
   mobileBannerTitle?: InputMaybe<StringFilter>;
   mobileBannerText?: InputMaybe<StringFilter>;
-  mobileBannerCtaText?: InputMaybe<StringFilter>;
   howItWorksTitle?: InputMaybe<StringFilter>;
   steps?: InputMaybe<HomeStepsFilter>;
   benefitsTitle?: InputMaybe<StringFilter>;
   benefits?: InputMaybe<HomeBenefitsFilter>;
   statsTitle?: InputMaybe<StringFilter>;
   statsSubtitle?: InputMaybe<StringFilter>;
-  testimonialsTitle?: InputMaybe<StringFilter>;
   stats?: InputMaybe<HomeStatsFilter>;
   contactTitle?: InputMaybe<StringFilter>;
   contactText?: InputMaybe<StringFilter>;
@@ -377,14 +373,12 @@ export type HomeMutation = {
   heroCtaText?: InputMaybe<Scalars['String']['input']>;
   mobileBannerTitle?: InputMaybe<Scalars['String']['input']>;
   mobileBannerText?: InputMaybe<Scalars['String']['input']>;
-  mobileBannerCtaText?: InputMaybe<Scalars['String']['input']>;
   howItWorksTitle?: InputMaybe<Scalars['String']['input']>;
   steps?: InputMaybe<Array<InputMaybe<HomeStepsMutation>>>;
   benefitsTitle?: InputMaybe<Scalars['String']['input']>;
   benefits?: InputMaybe<Array<InputMaybe<HomeBenefitsMutation>>>;
   statsTitle?: InputMaybe<Scalars['String']['input']>;
   statsSubtitle?: InputMaybe<Scalars['String']['input']>;
-  testimonialsTitle?: InputMaybe<Scalars['String']['input']>;
   stats?: InputMaybe<Array<InputMaybe<HomeStatsMutation>>>;
   contactTitle?: InputMaybe<Scalars['String']['input']>;
   contactText?: InputMaybe<Scalars['String']['input']>;
@@ -398,14 +392,14 @@ export type HomeMutation = {
   mascotCtaText?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type HomePartsFragment = { __typename: 'Home', siteTitle?: string | null, siteDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroDescription?: string | null, heroCtaText?: string | null, mobileBannerTitle?: string | null, mobileBannerText?: string | null, mobileBannerCtaText?: string | null, howItWorksTitle?: string | null, benefitsTitle?: string | null, statsTitle?: string | null, statsSubtitle?: string | null, testimonialsTitle?: string | null, contactTitle?: string | null, contactText?: string | null, contactCtaText?: string | null, instagramUrl?: string | null, emailAddress?: string | null, footerCopyright?: string | null, footerTagline?: string | null, mascotBubbleLine1?: string | null, mascotBubbleLine2?: string | null, mascotCtaText?: string | null, steps?: Array<{ __typename: 'HomeSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null, benefits?: Array<{ __typename: 'HomeBenefits', icon?: string | null, title?: string | null, description?: string | null } | null> | null, stats?: Array<{ __typename: 'HomeStats', number?: string | null, label?: string | null } | null> | null };
+export type HomePartsFragment = { __typename: 'Home', siteTitle?: string | null, siteDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroDescription?: string | null, heroCtaText?: string | null, mobileBannerTitle?: string | null, mobileBannerText?: string | null, howItWorksTitle?: string | null, benefitsTitle?: string | null, statsTitle?: string | null, statsSubtitle?: string | null, contactTitle?: string | null, contactText?: string | null, contactCtaText?: string | null, instagramUrl?: string | null, emailAddress?: string | null, footerCopyright?: string | null, footerTagline?: string | null, mascotBubbleLine1?: string | null, mascotBubbleLine2?: string | null, mascotCtaText?: string | null, steps?: Array<{ __typename: 'HomeSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null, benefits?: Array<{ __typename: 'HomeBenefits', icon?: string | null, title?: string | null, description?: string | null } | null> | null, stats?: Array<{ __typename: 'HomeStats', number?: string | null, label?: string | null } | null> | null };
 
 export type HomeQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, siteTitle?: string | null, siteDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroDescription?: string | null, heroCtaText?: string | null, mobileBannerTitle?: string | null, mobileBannerText?: string | null, mobileBannerCtaText?: string | null, howItWorksTitle?: string | null, benefitsTitle?: string | null, statsTitle?: string | null, statsSubtitle?: string | null, testimonialsTitle?: string | null, contactTitle?: string | null, contactText?: string | null, contactCtaText?: string | null, instagramUrl?: string | null, emailAddress?: string | null, footerCopyright?: string | null, footerTagline?: string | null, mascotBubbleLine1?: string | null, mascotBubbleLine2?: string | null, mascotCtaText?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, steps?: Array<{ __typename: 'HomeSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null, benefits?: Array<{ __typename: 'HomeBenefits', icon?: string | null, title?: string | null, description?: string | null } | null> | null, stats?: Array<{ __typename: 'HomeStats', number?: string | null, label?: string | null } | null> | null } };
+export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, siteTitle?: string | null, siteDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroDescription?: string | null, heroCtaText?: string | null, mobileBannerTitle?: string | null, mobileBannerText?: string | null, howItWorksTitle?: string | null, benefitsTitle?: string | null, statsTitle?: string | null, statsSubtitle?: string | null, contactTitle?: string | null, contactText?: string | null, contactCtaText?: string | null, instagramUrl?: string | null, emailAddress?: string | null, footerCopyright?: string | null, footerTagline?: string | null, mascotBubbleLine1?: string | null, mascotBubbleLine2?: string | null, mascotCtaText?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, steps?: Array<{ __typename: 'HomeSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null, benefits?: Array<{ __typename: 'HomeBenefits', icon?: string | null, title?: string | null, description?: string | null } | null> | null, stats?: Array<{ __typename: 'HomeStats', number?: string | null, label?: string | null } | null> | null } };
 
 export type HomeConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -417,7 +411,7 @@ export type HomeConnectionQueryVariables = Exact<{
 }>;
 
 
-export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, siteTitle?: string | null, siteDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroDescription?: string | null, heroCtaText?: string | null, mobileBannerTitle?: string | null, mobileBannerText?: string | null, mobileBannerCtaText?: string | null, howItWorksTitle?: string | null, benefitsTitle?: string | null, statsTitle?: string | null, statsSubtitle?: string | null, testimonialsTitle?: string | null, contactTitle?: string | null, contactText?: string | null, contactCtaText?: string | null, instagramUrl?: string | null, emailAddress?: string | null, footerCopyright?: string | null, footerTagline?: string | null, mascotBubbleLine1?: string | null, mascotBubbleLine2?: string | null, mascotCtaText?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, steps?: Array<{ __typename: 'HomeSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null, benefits?: Array<{ __typename: 'HomeBenefits', icon?: string | null, title?: string | null, description?: string | null } | null> | null, stats?: Array<{ __typename: 'HomeStats', number?: string | null, label?: string | null } | null> | null } | null } | null> | null } };
+export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, siteTitle?: string | null, siteDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroDescription?: string | null, heroCtaText?: string | null, mobileBannerTitle?: string | null, mobileBannerText?: string | null, howItWorksTitle?: string | null, benefitsTitle?: string | null, statsTitle?: string | null, statsSubtitle?: string | null, contactTitle?: string | null, contactText?: string | null, contactCtaText?: string | null, instagramUrl?: string | null, emailAddress?: string | null, footerCopyright?: string | null, footerTagline?: string | null, mascotBubbleLine1?: string | null, mascotBubbleLine2?: string | null, mascotCtaText?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, steps?: Array<{ __typename: 'HomeSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null, benefits?: Array<{ __typename: 'HomeBenefits', icon?: string | null, title?: string | null, description?: string | null } | null> | null, stats?: Array<{ __typename: 'HomeStats', number?: string | null, label?: string | null } | null> | null } | null } | null> | null } };
 
 export const HomePartsFragmentDoc = gql`
     fragment HomeParts on Home {
@@ -430,7 +424,6 @@ export const HomePartsFragmentDoc = gql`
   heroCtaText
   mobileBannerTitle
   mobileBannerText
-  mobileBannerCtaText
   howItWorksTitle
   steps {
     __typename
@@ -447,7 +440,6 @@ export const HomePartsFragmentDoc = gql`
   }
   statsTitle
   statsSubtitle
-  testimonialsTitle
   stats {
     __typename
     number

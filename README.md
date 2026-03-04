@@ -1,40 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# MediaGrowth — Lab 4: Static Site Generator & Git CMS
 
-## Getting Started
+A landing page for **MediaGrowth** — a performance-based short-form content platform for creators and streamers.
 
-First, run the development server:
+## Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Static Site Generator | [Next.js 14](https://nextjs.org) (Pages Router, `getStaticProps`) |
+| Git-based CMS | [TinaCMS](https://tina.io) |
+| Styling | Custom CSS (from Lab 3) |
+| Deployment | [Vercel](https://vercel.com) |
+
+## Features
+
+- All page content (hero, steps, benefits, stats, contact, footer) is editable via TinaCMS
+- Content is stored as Markdown in `content/home.md` and committed to Git
+- TinaCMS admin panel is available at `/admin`
+- Fully static output via `getStaticProps` — no runtime server needed
+
+## Local Development
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure environment variables
+
+Copy `.env.example` to `.env.local` and fill in your TinaCMS credentials:
+
+```bash
+cp .env.example .env.local
+```
+
+Get your values from [app.tina.io](https://app.tina.io) → your project → **Tokens**.
+
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_TINA_CLIENT_ID` | Project Client ID (safe to expose) |
+| `TINA_TOKEN` | Content read-only token |
+| `GITHUB_BRANCH` | Branch to use (default: `main`) |
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.  
+Open [http://localhost:4001](http://localhost:4001) to access the TinaCMS local editor.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## CMS Usage
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The TinaCMS admin panel at `/admin` lets you edit all page content without touching code:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- Site title & SEO description
+- Hero section text and CTA
+- "How It Works" steps (add/remove/reorder)
+- Benefits cards (icon, title, description)
+- Stats numbers
+- Contact section text and social links
+- Footer text
+- Mascot bubble messages
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Changes made via the cloud admin are saved as commits to `content/home.md` in the Git repository.
 
-## Learn More
+## Build & Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build   # tinacms build + next build
+npm run start   # serve production build locally
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Connect the GitHub repo to [Vercel](https://vercel.com)
+2. Set environment variables in Vercel dashboard (same as `.env.local`)
+3. Build command: `npm run build`
+4. Output directory: `.next`
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```
+content/
+  home.md          # All page content (CMS-managed)
+pages/
+  index.tsx        # Main page, reads content via TinaCMS GraphQL
+  _app.tsx         # Global styles import
+  _document.tsx    # HTML document shell
+styles/
+  reset.css        # CSS reset (from Lab 3)
+  style.css        # Custom design system (from Lab 3)
+tina/
+  config.ts        # TinaCMS schema — defines all editable fields
+  __generated__/   # Auto-generated GraphQL types and client
+public/
+  images/          # Static assets
+  admin/           # TinaCMS admin panel (generated)
+```

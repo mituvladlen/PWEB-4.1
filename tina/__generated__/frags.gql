@@ -1,0 +1,42 @@
+fragment HomeParts on Home {
+  __typename
+  siteTitle
+  siteDescription
+  heroTitle
+  heroSubtitle
+  heroDescription
+  heroCtaText
+  mobileBannerTitle
+  mobileBannerText
+  howItWorksTitle
+  steps {
+    __typename
+    number
+    title
+    description
+  }
+  benefitsTitle
+  benefits {
+    __typename
+    icon
+    title
+    description
+  }
+  statsTitle
+  statsSubtitle
+  stats {
+    __typename
+    number
+    label
+  }
+  contactTitle
+  contactText
+  contactCtaText
+  instagramUrl
+  emailAddress
+  footerCopyright
+  footerTagline
+  mascotBubbleLine1
+  mascotBubbleLine2
+  mascotCtaText
+}

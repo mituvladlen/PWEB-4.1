@@ -4,7 +4,7 @@ siteDescription: MediaGrowth helps creators and streamers grow faster through pe
 heroTitle: Scale Your Reach Without Ads
 heroSubtitle: Turn your content into a growth engine with performance-based short-form campaigns
 heroDescription: 'Get dozens of clippers creating viral TikTok, Instagram Reels, and YouTube Shorts from your content. Pay only for results. Grow your reach exponentially.'
-heroCtaText: Start Your Campaign!!!!
+heroCtaText: Start Your Campaign
 mobileBannerTitle: Manage Your Campaigns On the Go
 mobileBannerText: 'Track views, clippers, and earnings — right from your phone.'
 howItWorksTitle: How It Works

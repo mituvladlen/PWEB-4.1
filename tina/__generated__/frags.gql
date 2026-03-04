@@ -8,6 +8,7 @@ fragment HomeParts on Home {
   heroCtaText
   mobileBannerTitle
   mobileBannerText
+  mobileBannerCtaText
   howItWorksTitle
   steps {
     __typename
@@ -24,6 +25,7 @@ fragment HomeParts on Home {
   }
   statsTitle
   statsSubtitle
+  testimonialsTitle
   stats {
     __typename
     number

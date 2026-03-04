@@ -34,7 +34,7 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           GITHUB_BRANCH: main
           NEXT_PUBLIC_BASE_PATH: /PWEB-4.1
-        run: npm run build:vercel
+        run: npx next build
 
       - name: Add .nojekyll
         run: touch out/.nojekyll

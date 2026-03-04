@@ -10,6 +10,8 @@ type HomeProps = {
   variables: Record<string, unknown>;
 };
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Home(props: HomeProps) {
   const { data } = useTina({
     query: props.query,
@@ -67,7 +69,7 @@ export default function Home(props: HomeProps) {
         <div className="container">
           <div className="nav-wrapper">
             <a href="#" className="logo">
-              <img src="/images/mediagrowth.png" alt="MediaGrowth Logo" />
+              <img src={`${BASE}/images/mediagrowth.png`} alt="MediaGrowth Logo" />
             </a>
             <ul className="nav-links" id="nav-links">
               <li><a href="#how-it-works" onClick={closeMenu}>How It Works</a></li>
@@ -148,7 +150,7 @@ export default function Home(props: HomeProps) {
           <div className="testimonials-grid">
             {[1, 2, 3, 4, 5].map((n) => (
               <div className="testimonial-card" key={n}>
-                <img src={`/images/${n}.png`} alt={`Success story ${n}`} />
+                <img src={`${BASE}/images/${n}.png`} alt={`Success story ${n}`} />
               </div>
             ))}
           </div>
@@ -160,7 +162,7 @@ export default function Home(props: HomeProps) {
         <div className="container">
           <h2 className="mobile-only-stats__title">{String(p.statsTitle || "Join the Creator Movement")}</h2>
           <p className="mobile-only-stats__subtitle">{String(p.statsSubtitle || "")}</p>
-          <img src="/images/mediagrowth.png" alt="MediaGrowth" className="mobile-only-stats__img" />
+          <img src={`${BASE}/images/mediagrowth.png`} alt="MediaGrowth" className="mobile-only-stats__img" />
           <div className="mobile-only-stats__grid">
             {stats.map((s, i) => (
               <div className="mobile-only-stats__item" key={i}>
@@ -207,7 +209,7 @@ export default function Home(props: HomeProps) {
           <p>{String(p.mascotBubbleLine2 || "")}</p>
           <a href="#contact">{String(p.mascotCtaText || "Start your campaign →")}</a>
         </div>
-        <img src="/images/mediagrowth.png" alt="MediaGrowth Mascot" className="mascot__img" />
+        <img src={`${BASE}/images/mediagrowth.png`} alt="MediaGrowth Mascot" className="mascot__img" />
       </div>
     </>
   );
